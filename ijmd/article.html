@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Scalable Attention Mechanisms for Real-Time Sensor Fusion — IJMD</title>
+  <meta name="description" content="SARTI: transformer-based sensor fusion for industrial robots. 97.3% accuracy, sub-10ms latency. IJMD Machine Learning, Vol 12, 2026.">
+  <meta name="robots" content="index,follow"><link rel="canonical" href="https://ijmd.org/articles/ml/sarti-2026">
+  <meta name="citation_title" content="Scalable Attention Mechanisms for Real-Time Sensor Fusion in Autonomous Industrial Robots">
+  <meta name="citation_author" content="Fashola, Adeyemi O."><meta name="citation_author" content="Wang, Lei"><meta name="citation_author" content="Krishnamurthy, Priya">
+  <meta name="citation_publication_date" content="2026/06/01"><meta name="citation_journal_title" content="IJMD Machine Learning">
+  <meta name="citation_volume" content="12"><meta name="citation_issue" content="2">
+  <meta name="citation_doi" content="10.12345/ijmd.ml.2026.0412"><meta name="citation_issn" content="2398-4471">
+  <meta property="og:title" content="Scalable Attention Mechanisms for Real-Time Sensor Fusion — IJMD">
+  <meta property="og:description" content="SARTI achieves 97.3% accuracy in industrial sensor fusion at sub-10ms latency.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e8c96b'/><text x='16' y='22' font-family='Georgia' font-size='14' font-weight='700' fill='%23000' text-anchor='middle'>IJ</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ijmd.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Scalable Attention Mechanisms for Real-Time Sensor Fusion in Autonomous Industrial Robots","author":[{"@type":"Person","name":"Adeyemi O. Fashola"},{"@type":"Person","name":"Lei Wang"},{"@type":"Person","name":"Priya Krishnamurthy"}],"datePublished":"2026-06-01","publisher":{"@type":"Organization","name":"IJMD / VérgelAI"},"isPartOf":{"@type":"Periodical","name":"IJMD Machine Learning","issn":"2398-4471"},"url":"https://ijmd.org/articles/ml/sarti-2026","abstract":"Transformer-based sensor fusion architecture achieving 97.3% accuracy at sub-10ms latency across seven industrial environments."}</script>
+</head>
+<body>
+<div class="app no-right">
+
+<aside class="sidebar">
+  <a href="index.html" class="sidebar-logo"><div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5V11C3 15.8 6.5 20.2 11 21.5C15.5 20.2 19 15.8 19 11V6.5L11 2Z" fill="currentColor" opacity=".9"/><text x="11" y="14.5" font-family="Georgia" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">IJ</text></svg></div><div class="logo-wordmark"><strong>IJMD</strong><span>Machines &amp; Data</span></div></a>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H8.313c.511 0 .929-.411.929-.913v-7.075h5.516v7.075c0 .502.418.913.929.913h5.383c.511 0 .929-.411.929-.913V7.904c0-.302-.149-.585-.408-.758z"/></svg></span><span>Home Feed</span></a></li>
+    <li class="nav-item"><a href="explore.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><span>Explore</span></a></li>
+    <li class="nav-item"><a href="alerts.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span><span>Alerts</span><span class="nav-badge">4</span></a></li>
+    <li class="nav-item"><a href="journals.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span>All Journals</span></a></li>
+    <li class="nav-item"><a href="about.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><span>About</span></a></li>
+  </ul>
+  <div class="theme-toggle-wrap"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" role="switch" aria-checked="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"></svg><span id="themeLabel">Light Mode</span><div class="toggle-track"><div class="toggle-thumb"></div></div></button></div>
+  <a href="submit.html" class="submit-btn"><span>Submit Manuscript</span></a>
+  <div class="sidebar-profile"><div class="profile-avatar">AO</div><div class="profile-info"><div class="profile-name">Amara Okonkwo</div><div class="profile-handle">@amara.researcher</div></div></div>
+</aside>
+
+<main class="main-content">
+  <div class="feed-header" style="padding:0">
+    <div class="feed-title-bar"><span style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;">Article</span><span>IJMD ML · SERIES A</span></div>
+  </div>
+
+  <div class="article-detail">
+    <div class="article-breadcrumb">
+      <a href="index.html">Home</a> <span>›</span>
+      <a href="journals.html">Journals</a> <span>›</span>
+      <span>IJMD Machine Learning</span> <span>›</span>
+      <span>Vol 12, No 2</span>
+    </div>
+
+    <h1 class="article-h1">Scalable Attention Mechanisms for Real-Time Sensor Fusion in Autonomous Industrial Robots</h1>
+
+    <div class="article-byline"><strong>Adeyemi O. Fashola</strong>, Lei Wang, Priya Krishnamurthy, Johann S. Müller</div>
+    <div class="article-byline" style="margin-top:3px;font-size:12px">University of Lagos · MIT CSAIL · IIT Delhi · ETH Zürich</div>
+
+    <div class="article-meta-chips" style="margin-top:14px">
+      <span class="meta-chip series">Series A · Vol 12, No 2</span>
+      <span class="meta-chip oa">OPEN ACCESS</span>
+      <span class="meta-chip doi">DOI: 10.12345/ijmd.ml.2026.0412</span>
+      <span style="font-size:12px;color:var(--text-dim)">Published June 1, 2026</span>
+    </div>
+
+    <div class="paper-tags" style="margin-bottom:20px">
+      <a class="ptag" href="explore.html">#SensorFusion</a><a class="ptag" href="explore.html">#Transformers</a><a class="ptag" href="explore.html">#Robotics</a><a class="ptag" href="explore.html">#RealTime</a><a class="ptag" href="explore.html">#IndustrialAI</a>
+    </div>
+
+    <div class="paper-actions" style="max-width:100%;justify-content:flex-start;gap:6px;margin-bottom:20px;flex-wrap:wrap">
+      <button class="action-btn cite" type="button" style="border:1px solid var(--border);padding:8px 16px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Cite (43)</span></button>
+      <button class="action-btn like" type="button" data-count="281" style="border:1px solid var(--border);padding:8px 16px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>281</span></button>
+      <button class="action-btn save" type="button" style="border:1px solid var(--border);padding:8px 16px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span>Save</span></button>
+      <button class="action-btn share" type="button" style="border:1px solid var(--border);padding:8px 16px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><span>Share</span></button>
+      <a href="#" style="border:1px solid var(--accent);padding:8px 16px;border-radius:8px;font-size:12.5px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download PDF</a>
+    </div>
+
+    <div class="article-abstract-block">
+      <div class="abstract-label">Abstract</div>
+      <div class="abstract-text">We present SARTI (Scalable Attention for Real-Time Industrial fusion), a novel transformer-based architecture that fuses heterogeneous sensor streams — LiDAR, tactile, and infrared — at sub-10ms latencies without sacrificing context window depth. Validated across seven industrial environments, SARTI achieves 97.3% object classification accuracy under heavy occlusion, representing a 14-point improvement over existing baselines. Our ablation studies reveal that cross-modal positional encoding is the dominant contributor to performance gains, contributing approximately 9.2 of the 14-point delta. We further demonstrate that SARTI scales sublinearly with the number of sensor modalities, making it practical for deployments requiring more than four simultaneous input streams. Code and datasets are publicly available at github.com/ijmd/sarti.</div>
+    </div>
+
+    <div class="article-section-title">1. Introduction</div>
+    <div class="article-body">
+      <p>Real-time sensor fusion in industrial environments presents a uniquely challenging intersection of computational and perceptual constraints. Factory floors, logistics centers, and automated assembly lines demand systems that simultaneously process high-bandwidth sensor streams while maintaining sub-cycle-time inference — typically under 10ms for safety-critical applications.</p>
+      <p>Prior work on multi-modal fusion has largely addressed this challenge through early or late fusion strategies, both of which sacrifice either temporal alignment or context richness. Transformer architectures, while expressive, have been deemed impractical for real-time industrial settings due to their quadratic attention complexity.</p>
+      <p>In this paper, we challenge this assumption by introducing <strong>SARTI</strong>: a factorized cross-modal attention mechanism that maintains full context across sensor modalities while meeting the latency constraints of industrial deployment. Our key contributions are: (i) a novel cross-modal positional encoding scheme, (ii) a hardware-aware attention approximation with provable error bounds, and (iii) a comprehensive benchmark across seven industrial environments.</p>
+    </div>
+
+    <div class="article-section-title">2. Method: Cross-Modal Attention</div>
+    <div class="article-body">
+      <p>SARTI decomposes the full sensor fusion problem into a series of pairwise cross-attention operations, each conditioned on a learned cross-modal positional embedding that encodes the spatial and temporal relationships between sensor modalities. Formally, for modalities M = {LiDAR, Tactile, IR}, we compute:</p>
+      <div style="background:var(--bg-input);border:1px solid var(--border);border-radius:8px;padding:16px;margin:12px 0;font-family:'DM Mono',monospace;font-size:13px;color:var(--text-mid);line-height:1.6">
+        A(Q_i, K_j, V_j) = softmax((Q_i · K_j^T + B_ij) / √d_k) · V_j<br>
+        where B_ij ∈ ℝ^{L×L} is the learned cross-modal bias matrix
+      </div>
+      <p>This formulation allows modality-specific attention heads to specialize while the cross-modal bias terms enforce geometric consistency across sensor reference frames. The approximation reduces complexity from O(L²) to O(L log L) using a learned low-rank decomposition of the bias matrix.</p>
+    </div>
+
+    <div class="article-section-title">3. Results</div>
+    <div class="paper-chart-wrap" style="height:140px;margin:0 0 16px">
+      <span class="chart-label-inner">CLASSIFICATION ACCURACY BY ENVIRONMENT (%)</span>
+      <div class="chart-bars"><div class="cbar" style="height:55%"></div><div class="cbar" style="height:68%"></div><div class="cbar" style="height:72%"></div><div class="cbar hi" style="height:97%"></div><div class="cbar" style="height:83%"></div><div class="cbar" style="height:91%"></div><div class="cbar hi" style="height:95%"></div></div>
+    </div>
+    <div class="article-body">
+      <p>Across all seven test environments — spanning automotive assembly, pharmaceutical packaging, semiconductor fabrication, food processing, logistics sorting, heavy manufacturing, and electronics assembly — SARTI achieves a mean accuracy of 90.4%, with a peak of 97.3% in the pharmaceutical packaging environment (E4). The lowest performance (55.1%, E1) occurs in the automotive assembly environment where occlusion from moving parts exceeds 70%.</p>
+    </div>
+
+    <div class="cite-box">
+      <div class="cite-box-title">How to Cite</div>
+      <div class="cite-code">Fashola, A.O., Wang, L., Krishnamurthy, P., & Müller, J.S. (2026). Scalable Attention Mechanisms for Real-Time Sensor Fusion in Autonomous Industrial Robots. <em>IJMD Machine Learning</em>, 12(2), 412–441. https://doi.org/10.12345/ijmd.ml.2026.0412</div>
+      <button class="copy-btn" type="button">Copy Citation</button>
+    </div>
+
+    <div style="padding:20px 0;border-top:1px solid var(--border-sub);margin-top:20px;font-size:12px;color:var(--text-dim)">
+      Received: April 12, 2026 · Accepted: May 28, 2026 · Published: June 1, 2026 · © 2026 IJMD / VérgelAI Inc. CC BY 4.0
+    </div>
+  </div>
+</main>
+
+</div>
+<script src="js/ijmd.js"></script>
+</body>
+</html>

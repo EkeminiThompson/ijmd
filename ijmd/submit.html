@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Submit Manuscript — IJMD | International Journals of Machines & Data</title>
+  <meta name="description" content="Submit your research to IJMD. Fast peer review (avg 18 days), open access, indexed in Scopus and SCI-Expanded. Six journal series to choose from.">
+  <meta name="robots" content="index,follow"><link rel="canonical" href="https://ijmd.org/submit">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e8c96b'/><text x='16' y='22' font-family='Georgia' font-size='14' font-weight='700' fill='%23000' text-anchor='middle'>IJ</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ijmd.css">
+</head>
+<body>
+<div class="app no-right">
+
+<aside class="sidebar">
+  <a href="index.html" class="sidebar-logo"><div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5V11C3 15.8 6.5 20.2 11 21.5C15.5 20.2 19 15.8 19 11V6.5L11 2Z" fill="currentColor" opacity=".9"/><text x="11" y="14.5" font-family="Georgia" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">IJ</text></svg></div><div class="logo-wordmark"><strong>IJMD</strong><span>Machines &amp; Data</span></div></a>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H8.313c.511 0 .929-.411.929-.913v-7.075h5.516v7.075c0 .502.418.913.929.913h5.383c.511 0 .929-.411.929-.913V7.904c0-.302-.149-.585-.408-.758z"/></svg></span><span>Home Feed</span></a></li>
+    <li class="nav-item"><a href="explore.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><span>Explore</span></a></li>
+    <li class="nav-item"><a href="journals.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span>All Journals</span></a></li>
+    <li class="nav-item"><a href="about.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><span>About</span></a></li>
+  </ul>
+  <div class="theme-toggle-wrap"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" role="switch" aria-checked="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"></svg><span id="themeLabel">Light Mode</span><div class="toggle-track"><div class="toggle-thumb"></div></div></button></div>
+  <a href="submit.html" class="submit-btn"><span>Submit Manuscript</span></a>
+  <div class="sidebar-profile"><div class="profile-avatar">AO</div><div class="profile-info"><div class="profile-name">Amara Okonkwo</div><div class="profile-handle">@amara.researcher</div></div></div>
+</aside>
+
+<main class="main-content">
+  <div class="feed-header">
+    <div class="feed-title-bar"><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;">Submit Manuscript</span><span>AUTHOR PORTAL</span></div>
+    <div class="feed-tabs"><div class="feed-tab active">New Submission</div><div class="feed-tab">My Submissions</div><div class="feed-tab">Guidelines</div><div class="feed-tab">Author FAQ</div></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 280px;gap:0;min-height:80vh">
+    <div style="border-right:1px solid var(--border-sub)">
+      <form class="submit-page" id="submitForm" novalidate>
+        <div class="page-title">New Manuscript Submission</div>
+        <div class="page-subtitle">Submit to one of our six peer-reviewed open-access series. Average first decision: <strong style="color:var(--green)">18 days</strong>. All submissions handled securely by <strong style="color:var(--accent)">VérgelAI</strong>.</div>
+
+        <div class="form-section">
+          <div class="form-section-title">01 — Journal Series</div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label" for="series">Target Journal Series *</label>
+              <select class="form-select" id="series" required>
+                <option value="">Select a series…</option>
+                <option>Series A — Machine Learning & Intelligent Systems</option>
+                <option>Series B — Data Science & Large-Scale Analytics</option>
+                <option>Series C — Robotics & Autonomous Systems</option>
+                <option>Series D — Edge Computing & Embedded Intelligence</option>
+                <option>Series E — Human-Machine Interaction & Ethics</option>
+                <option>Series F — Foundation Models & Generative AI</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label" for="type">Article Type *</label>
+              <select class="form-select" id="type" required>
+                <option value="">Select type…</option>
+                <option>Original Research Article</option>
+                <option>Review / Survey Article</option>
+                <option>Technical Communication (Short)</option>
+                <option>Perspective / Commentary</option>
+                <option>Replication Study</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">02 — Manuscript Details</div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label" for="title">Manuscript Title *</label>
+              <input class="form-input" id="title" type="text" placeholder="Full title of your manuscript" required>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label" for="abstract">Abstract *</label>
+              <textarea class="form-textarea" id="abstract" placeholder="150–300 words. State background, objective, methods, key results, and conclusion." required style="min-height:140px"></textarea>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group">
+              <label class="form-label" for="keywords">Keywords *</label>
+              <input class="form-input" id="keywords" type="text" placeholder="Comma-separated, 4–8 keywords">
+              <div class="form-hint">e.g. federated learning, differential privacy, convergence theory</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">03 — Authors</div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="fname">First / Given Name *</label><input class="form-input" id="fname" type="text" placeholder="First name" required></div>
+            <div class="form-group"><label class="form-label" for="lname">Last / Family Name *</label><input class="form-input" id="lname" type="text" placeholder="Last name" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="email">Institutional Email *</label><input class="form-input" id="email" type="email" placeholder="you@university.edu" required></div>
+            <div class="form-group"><label class="form-label" for="orcid">ORCID iD</label><input class="form-input" id="orcid" type="text" placeholder="0000-0000-0000-0000"></div>
+          </div>
+          <div class="form-row single">
+            <div class="form-group"><label class="form-label" for="affiliation">Affiliation *</label><input class="form-input" id="affiliation" type="text" placeholder="Institution, Department, Country" required></div>
+          </div>
+          <div style="margin-top:6px"><a href="#" style="font-size:13px;color:var(--blue);font-weight:500">+ Add co-author</a></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">04 — Upload Files</div>
+          <div class="upload-area" tabindex="0" role="button" aria-label="Upload manuscript file">
+            <div class="upload-icon">📄</div>
+            <div class="upload-label">Click or drag to upload manuscript</div>
+            <div class="upload-hint">PDF, DOC, DOCX · Max 50MB · Double-blind (remove author info)</div>
+          </div>
+          <div style="margin-top:12px"><a href="#" style="font-size:13px;color:var(--blue);font-weight:500">+ Add supplementary files</a></div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-title">05 — Submission Checklist</div>
+          <ul class="checklist">
+            <li>Manuscript is double-blind (no author names in document)</li>
+            <li>Abstract is 150–300 words and structured</li>
+            <li>All figures are 300 DPI or vector format</li>
+            <li>References follow IJMD citation style (APA 7th)</li>
+            <li>Data availability statement is included</li>
+            <li>Ethics approval obtained (if applicable)</li>
+            <li>All co-authors have reviewed and approved the submission</li>
+          </ul>
+        </div>
+
+        <button class="submit-form-btn" type="submit">Submit Manuscript →</button>
+        <p style="font-size:11.5px;color:var(--text-dim);margin-top:12px;text-align:center">By submitting you agree to IJMD's <a href="#" style="color:var(--blue)">Author Agreement</a> and <a href="#" style="color:var(--blue)">Ethics Policy</a>. Powered by <strong style="color:var(--accent)">VérgelAI</strong>.</p>
+      </form>
+    </div>
+
+    <!-- Sidebar info panel -->
+    <div style="padding:24px 20px;font-size:13px;color:var(--text-dim);line-height:1.7">
+      <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--text-strong);margin-bottom:14px">Why IJMD?</div>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px">
+        <div><div style="font-family:'DM Mono',monospace;font-size:22px;color:var(--accent);font-weight:500">18d</div><div>Avg. first decision — one of the fastest in the field</div></div>
+        <div><div style="font-family:'DM Mono',monospace;font-size:22px;color:var(--green);font-weight:500">100%</div><div>Open access under CC BY 4.0 since 2020</div></div>
+        <div><div style="font-family:'DM Mono',monospace;font-size:22px;color:var(--blue);font-weight:500">2.8</div><div>2025 Impact Factor across all series</div></div>
+        <div><div style="font-family:'DM Mono',monospace;font-size:22px;color:var(--text-strong);font-weight:500">62</div><div>Countries represented in 2025 publications</div></div>
+      </div>
+      <div style="font-weight:700;color:var(--text-mid);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Indexed In</div>
+      <div class="index-chips" style="margin-bottom:20px"><span class="index-chip">Scopus</span><span class="index-chip">SCI-Exp</span><span class="index-chip">DBLP</span><span class="index-chip">IEEE</span><span class="index-chip">PubMed</span><span class="index-chip">arXiv</span></div>
+      <div style="font-weight:700;color:var(--text-mid);margin-bottom:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Questions?</div>
+      <div>Contact the editorial team at <a href="mailto:editorial@ijmd.org" style="color:var(--blue)">editorial@ijmd.org</a> or read our <a href="#" style="color:var(--blue)">Author FAQ</a>.</div>
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border-sub);font-size:11px">Submission portal powered by <strong style="color:var(--accent)">VérgelAI</strong> · © 2026 IJMD</div>
+    </div>
+  </div>
+</main>
+
+</div>
+<script src="js/ijmd.js"></script>
+</body>
+</html>

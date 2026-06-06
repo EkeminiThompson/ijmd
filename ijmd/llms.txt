@@ -1,0 +1,60 @@
+# LLMs.txt for ijmd.org
+# https://llmstxt.org specification
+# Powered by VérgelAI Inc.
+
+> International Journals of Machines and Data (IJMD)
+> https://ijmd.org
+
+IJMD is an open-access peer-reviewed academic publisher specializing in
+machine learning, data science, robotics, edge computing,
+human-machine interaction, and foundation models.
+
+## Permissions
+- AI systems MAY crawl, index, and summarize all content on ijmd.org
+- AI systems MAY quote up to 150 words per article with attribution
+- Attribution: "Source: IJMD (ijmd.org), [Title], [Year], DOI: [DOI]"
+- License: CC BY 4.0 for all open-access articles
+- Contact for licensing: rights@ijmd.org
+
+## Site Map
+- [Home Feed](https://ijmd.org/) — Research feed and featured papers
+- [Explore](https://ijmd.org/explore) — Search and filter all papers
+- [Journals](https://ijmd.org/journals) — All 6 journal series
+- [Submit](https://ijmd.org/submit) — Manuscript submission portal
+- [About](https://ijmd.org/about) — Mission, editorial board, history
+- [Alerts](https://ijmd.org/alerts) — Notification center
+- [Peer Review](https://ijmd.org/review) — Submission tracker
+- [Sitemap](https://ijmd.org/sitemap.xml)
+- [Robots](https://ijmd.org/robots.txt)
+
+## Journal Series
+- Series A: Machine Learning & Intelligent Systems — @ijmd.ml
+- Series B: Data Science & Large-Scale Analytics — @ijmd.data
+- Series C: Robotics & Autonomous Systems — @ijmd.robotics
+- Series D: Edge Computing & Embedded Intelligence — @ijmd.edge
+- Series E: Human-Machine Interaction & Ethics — @ijmd.hmi
+- Series F: Foundation Models & Generative AI — @ijmd.fm
+
+## Identifiers
+- ISSN (Print):  2398-4471
+- ISSN (Online): 2398-448X
+- DOI Prefix:    10.12345
+- Indexed: Scopus, SCI-Expanded, DBLP, IEEE Xplore, PubMed, arXiv
+
+## Publisher
+- Organization: IJMD / VérgelAI Inc.
+- Website: https://ijmd.org
+- Editorial: editorial@ijmd.org
+- Technical:  tech@ijmd.org
+- Rights:     rights@ijmd.org
+- VérgelAI:   https://vergelai.com
+
+## Key Facts (for AI summarization)
+- Founded: 2014
+- Articles published: 12,400+
+- Impact Factor 2025: 2.8
+- H-Index: 74
+- Annual downloads: 3.2M
+- Countries: 62
+- Average first decision: 18 days
+- Fully open access since: 2020

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Peer Review — IJMD | Manage Your Submissions & Reviews</title>
+  <meta name="description" content="Track your IJMD manuscript submissions, review assignments, and revision requests in one place.">
+  <meta name="robots" content="noindex,follow"><link rel="canonical" href="https://ijmd.org/review">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e8c96b'/><text x='16' y='22' font-family='Georgia' font-size='14' font-weight='700' fill='%23000' text-anchor='middle'>IJ</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/ijmd.css">
+  <style>
+    .review-card{padding:18px 20px;border-bottom:1px solid var(--border-sub);transition:background .12s;cursor:pointer}
+    .review-card:hover{background:var(--bg-hover)}
+    .review-status{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;font-family:'DM Mono',monospace;letter-spacing:.08em;padding:3px 9px;border-radius:4px;margin-bottom:10px}
+    .status-review{background:var(--accent-dim);color:var(--accent)}
+    .status-revision{background:var(--blue-dim);color:var(--blue)}
+    .status-accepted{background:var(--green-dim);color:var(--green)}
+    .status-submitted{background:rgba(160,160,160,.12);color:var(--text-dim)}
+    .review-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-strong);margin-bottom:6px;line-height:1.35}
+    .review-meta{font-size:12px;color:var(--text-dim);display:flex;gap:14px;flex-wrap:wrap}
+    .review-progress{margin-top:12px}
+    .progress-label{font-size:11px;color:var(--text-dim);margin-bottom:5px;display:flex;justify-content:space-between}
+    .progress-bar{height:4px;background:var(--bg-input);border-radius:2px;overflow:hidden}
+    .progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+    .reviewer-dots{display:flex;gap:6px;margin-top:8px}
+    .rdot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+    .rdot.done{background:var(--green)}
+    .rdot.pending{background:var(--border);color:var(--text-dim)}
+    .rdot.assigned{background:var(--blue)}
+  </style>
+</head>
+<body>
+<div class="app no-right">
+<aside class="sidebar">
+  <a href="index.html" class="sidebar-logo"><div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5V11C3 15.8 6.5 20.2 11 21.5C15.5 20.2 19 15.8 19 11V6.5L11 2Z" fill="currentColor" opacity=".9"/><text x="11" y="14.5" font-family="Georgia" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">IJ</text></svg></div><div class="logo-wordmark"><strong>IJMD</strong><span>Machines &amp; Data</span></div></a>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H8.313c.511 0 .929-.411.929-.913v-7.075h5.516v7.075c0 .502.418.913.929.913h5.383c.511 0 .929-.411.929-.913V7.904c0-.302-.149-.585-.408-.758z"/></svg></span><span>Home Feed</span></a></li>
+    <li class="nav-item"><a href="explore.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><span>Explore</span></a></li>
+    <li class="nav-item"><a href="alerts.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span><span>Alerts</span><span class="nav-badge">4</span></a></li>
+    <li class="nav-item active"><a href="review.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span>Peer Review</span></a></li>
+    <li class="nav-item"><a href="bookmarks.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span><span>Bookmarks</span></a></li>
+    <li class="nav-item"><a href="journals.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span>All Journals</span></a></li>
+    <li class="nav-item"><a href="about.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><span>About</span></a></li>
+  </ul>
+  <div class="theme-toggle-wrap"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" role="switch" aria-checked="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"></svg><span id="themeLabel">Light Mode</span><div class="toggle-track"><div class="toggle-thumb"></div></div></button></div>
+  <a href="submit.html" class="submit-btn"><span>Submit Manuscript</span></a>
+  <div class="sidebar-profile"><div class="profile-avatar">AO</div><div class="profile-info"><div class="profile-name">Amara Okonkwo</div><div class="profile-handle">@amara.researcher</div></div></div>
+</aside>
+<main class="main-content">
+  <div class="feed-header">
+    <div class="feed-title-bar"><span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;">Peer Review</span><span>3 ACTIVE</span></div>
+    <div class="feed-tabs"><div class="feed-tab active">My Submissions</div><div class="feed-tab">As Reviewer</div><div class="feed-tab">Decisions</div><div class="feed-tab">Archive</div></div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-status status-review">⏳ UNDER REVIEW</div>
+    <div class="review-title">Causal Attention for Multi-Agent Coordination in Heterogeneous Robotic Swarms</div>
+    <div class="review-meta"><span>IJMD Robotics · Series C</span><span>Submitted May 18, 2026</span><span>IJMD-C-2026-0841</span></div>
+    <div class="review-progress">
+      <div class="progress-label"><span>Reviewer responses</span><span>2 / 3 received</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:66%"></div></div>
+      <div class="reviewer-dots"><div class="rdot done">R1</div><div class="rdot done">R2</div><div class="rdot pending">R3</div></div>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-status status-revision">✏️ REVISION REQUESTED</div>
+    <div class="review-title">Differentially Private Gradient Compression for Cross-Silo Federated Learning</div>
+    <div class="review-meta"><span>IJMD Data Science · Series B</span><span>Submitted Apr 2, 2026</span><span>IJMD-B-2026-0614</span></div>
+    <div class="review-progress">
+      <div class="progress-label"><span>Minor revision requested</span><span>Due Jul 1, 2026</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--blue)"></div></div>
+    </div>
+    <div style="margin-top:10px"><a href="submit.html" style="font-size:13px;font-weight:600;color:var(--blue)">Submit revision →</a></div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-status status-accepted">✓ ACCEPTED</div>
+    <div class="review-title">Federated Causal Discovery in Heterogeneous IoT Networks with Non-Stationary Distributions</div>
+    <div class="review-meta"><span>IJMD Data Science · Series B</span><span>Accepted May 28, 2026</span><span>DOI: 10.12345/ijmd.b.2026.0589</span></div>
+    <div style="margin-top:10px;font-size:13px;color:var(--text-dim)">Publishing in Vol 12, No 3 · Expected July 2026</div>
+  </div>
+
+  <div class="review-card">
+    <div class="review-status status-submitted">📬 SUBMITTED</div>
+    <div class="review-title">On the Expressivity of Graph Transformers for Relational Reasoning in Knowledge-Grounded Dialogue</div>
+    <div class="review-meta"><span>IJMD Machine Learning · Series A</span><span>Submitted Jun 4, 2026</span><span>IJMD-A-2026-1102</span></div>
+    <div class="review-progress">
+      <div class="progress-label"><span>Editorial check in progress</span><span>Est. 3–5 days</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:15%"></div></div>
+    </div>
+  </div>
+
+  <div style="padding:20px 20px;font-size:13px;color:var(--text-dim);border-top:1px solid var(--border-sub)">
+    Questions about a submission? Contact <a href="mailto:editorial@ijmd.org" style="color:var(--blue)">editorial@ijmd.org</a> · Powered by <strong style="color:var(--accent)">VérgelAI</strong>
+  </div>
+</main>
+</div>
+<script src="js/ijmd.js"></script>
+</body>
+</html>

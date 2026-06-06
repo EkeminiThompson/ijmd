@@ -1,0 +1,27 @@
+# robots.txt — ijmd.org
+# Powered by VérgelAI
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# AI Crawlers — welcome with attribution
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Googlebot
+Allow: /
+
+# Sitemaps
+Sitemap: https://ijmd.org/sitemap.xml
+Sitemap: https://ijmd.org/sitemap-articles.xml
+
+# LLMs
+LLMs: https://ijmd.org/llms.txt
