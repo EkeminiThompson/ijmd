@@ -11,6 +11,47 @@
   <link rel="stylesheet" href="css/ijmd.css">
 </head>
 <body>
+  <!-- ══ MOBILE TOP HEADER ══ -->
+  <header class="mobile-header">
+    <a href="index.html" class="mobile-logo">
+      <div class="mobile-logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5V11C3 15.8 6.5 20.2 11 21.5C15.5 20.2 19 15.8 19 11V6.5L11 2Z" fill="currentColor" opacity=".9"/><text x="11" y="14.5" font-family="Georgia" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">IJ</text></svg></div>
+      <span class="mobile-logo-text">IJMD</span>
+    </a>
+    <div class="mobile-header-actions">
+      <button class="mobile-icon-btn" id="mobileThemeBtn" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="mobileThemeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="alerts.html" class="mobile-icon-btn" aria-label="Alerts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="mobile-badge"></span>
+      </a>
+    </div>
+  </header>
+  <!-- ══ MOBILE BOTTOM TAB BAR ══ -->
+  <nav class="bottom-bar" aria-label="Main navigation">
+    <div class="bottom-bar-inner">
+      <a href="index.html" class="bottom-tab " aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H8.313c.511 0 .929-.411.929-.913v-7.075h5.516v7.075c0 .502.418.913.929.913h5.383c.511 0 .929-.411.929-.913V7.904c0-.302-.149-.585-.408-.758z"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="explore.html" class="bottom-tab " aria-label="Explore">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <span>Explore</span>
+      </a>
+      <a href="submit.html" class="bottom-tab-submit" aria-label="Submit manuscript">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </a>
+      <a href="journals.html" class="bottom-tab " aria-label="Journals">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Journals</span>
+      </a>
+      <a href="profile.html" class="bottom-tab active" aria-label="Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Profile</span>
+      </a>
+    </div>
+  </nav>
+
 <div class="app no-right">
 <aside class="sidebar">
   <a href="index.html" class="sidebar-logo"><div class="logo-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M11 2L3 6.5V11C3 15.8 6.5 20.2 11 21.5C15.5 20.2 19 15.8 19 11V6.5L11 2Z" fill="currentColor" opacity=".9"/><text x="11" y="14.5" font-family="Georgia" font-size="7.5" font-weight="700" fill="white" text-anchor="middle">IJ</text></svg></div><div class="logo-wordmark"><strong>IJMD</strong><span>Machines &amp; Data</span></div></a>
